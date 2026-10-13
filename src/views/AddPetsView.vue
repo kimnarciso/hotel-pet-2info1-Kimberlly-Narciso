@@ -134,6 +134,12 @@ onMounted(carregarTutores);
           </option>
         </select>
       </div>
+      <button
+        type="submit"
+        class="btn btn-success mt-2"
+      >
+        Salvar Pet
+      </button>
     </form>
   </div>
 </template>
