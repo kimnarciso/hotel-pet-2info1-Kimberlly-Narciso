@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+
   routes: [
     {
       path: '/',
@@ -18,9 +19,34 @@ const router = createRouter({
       component: () => import('../views/AddPetsView.vue'),
     },
     {
+      path: '/pets/:id/editar',
+      name: 'editar-pet',
+      component: () => import('../views/EditPetView.vue'),
+    },
+    {
       path: '/pets/:id',
       name: 'detalhes-pet',
       component: () => import('../views/PetDetailsView.vue'),
+    },
+    {
+      path: '/tutores',
+      name: 'tutores',
+      component: () => import('../views/TutorView.vue'),
+    },
+    {
+      path: '/tutores/novo',
+      name: 'addTutor',
+      component: () => import('../views/AddTutorView.vue'),
+    },
+    {
+      path: '/tutores/:id/editar',
+      name: 'editar-tutor',
+      component: () => import('../views/EditTutorView.vue'),
+    },
+    {
+      path: '/tutores/:id',
+      name: 'detalhes-tutor',
+      component: () => import('../views/TutorDetailsView.vue'),
     },
   ],
 });
